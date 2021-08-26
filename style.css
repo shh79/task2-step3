@@ -6,6 +6,8 @@
 :root{
     --main-color: #EFEFF6;
     --menu-color: #0E0C28;
+    --menu-font-color: #A4AADB;
+    --menu-hover: #242849;
     --lighter-main-color: #FFFFFF;
     --hover-color: #F6F6FF;
     --banner-color: #007BFF;
@@ -22,8 +24,6 @@
     flex-direction: row;
     box-shadow: var(--main-color);
     background-color: var(--lighter-main-color);
-    /* position: sticky;
-    top: 0; */
 }
 .banner{
     font-weight: bold;
@@ -39,7 +39,7 @@
 }
 .item{
     border: none;
-    border-left: 0.5px solid;
+    border-left: 0.5px solid gray;
     padding: 0px 20px 0px 20px;
 }
 .searchBar{
@@ -74,11 +74,50 @@ button.NavBTN{
 .menu{
     display: flex;
     flex-direction: column;
+    padding: 20px 14px 20px 14px;
     background-color: var(--menu-color);
     color: var(--lighter-main-color);
-    /* width: 17%; */
     height: 100%;
-    /* position: fixed; */
+    gap: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.menuItem{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.menuItemTitle{
+    display: flex;
+    color: var(--menu-font-color);
+    margin-left: 12px;
+    height: 40px;
+    justify-items: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.menuSubItem{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    border-radius: 1.5px;
+    color: var(--menu-font-color);
+    cursor: pointer;
+    justify-items: center;
+    align-items: center;
+    padding-left: 12px;
+}
+.menuSubItem img{
+    width: 16px;
+    height: 16px;
+}
+.activeItem{
+    background-color: var(--menu-hover);
+    color: var(--lighter-main-color);
+}
+.menuSubItem:hover{
+    background-color: var(--menu-hover);
+    color: var(--lighter-main-color);
 }
 .dashboard{
     display: grid;

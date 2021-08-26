@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #EFEFF6;
+    --menu-color: #0E0C28;
+    --lighter-main-color: #FFFFFF;
+    --hover-color: #F6F6FF;
+    --banner-color: #007BFF;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 9% 91%;
+    height: 100vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: var(--main-color);
+    background-color: var(--lighter-main-color);
+    /* position: sticky;
+    top: 0; */
+}
+.banner{
+    font-weight: bold;
+    font-size: 29px;
+    padding-left: 20px;
+    color: var(--banner-color);
+    justify-self: center;
+    align-self: center;
+}
+.NavItem{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    border: none;
+    border-left: 0.5px solid;
+    padding: 0px 20px 0px 20px;
+}
+.searchBar{
+    height: 50%;
+    align-self: center;
+    padding-left: 5px;
+    margin-right: 20px;
+}
+button.NavBTN{
+    background-color: var(--lighter-main-color);
+    border: none;
+    margin-top: 15px;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.profile{
+    border-radius: 100px;
+    border-color: var(--lighter-main-color);
+    margin: 15px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+.main{
+    display: grid;
+    grid-template-columns: 17% 83%;
+    grid-template-rows: 100%;
+    background-color: brown;
+    height: 100%;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu-color);
+    color: var(--lighter-main-color);
+    /* width: 17%; */
+    height: 100%;
+    /* position: fixed; */
+}
+.dashboard{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: var(--main-color);
+    overflow-y: scroll;
+}
+.dashboard::-webkit-scrollbar{
+    display: none;
+}
